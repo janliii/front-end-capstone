@@ -19,7 +19,7 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
         Hit the Spot
       </button>
       <nav>
-            <Link to="/destination">Destination</Link>
+            <Link to="/destination">MySpot</Link>
       </nav>
       
       </div>

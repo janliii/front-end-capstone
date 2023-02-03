@@ -12,7 +12,7 @@ const Chatbot: React.FC<ChatbotProps> = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:3001', { input });
+      const { data } = await axios.post('http://localhost:3300/users/chat', { input });
       setResponse(data.response);
     } catch (error) {
       console.error(error);

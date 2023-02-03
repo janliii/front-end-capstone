@@ -2,7 +2,7 @@
   width: 550px;
   min-width: 350px;
   height: 580px;
-  background-color: lightpink;
+  background-color: #A9DFBF;
   padding: 25px;
   margin: 20px auto;
   border-radius: 5px;
@@ -12,3 +12,7 @@
     text-align: center;
     font-size: 24px;
       }  
+  .chatbot-body{
+    align-items:center;
+ 
+  }

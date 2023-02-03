@@ -1,7 +1,7 @@
 
 .Navbar{
 display:flex;
-background: seagreen;
+background: #85C1E9 ;
 height: 85px;
 justify-content: space-between;
 padding: 0.2rem calc((100vw - 1000px) / 2);
@@ -19,4 +19,9 @@ a{
     color: white
     ;
   }
+}
+
+button{
+  background:#1D8348;
+  width:120px;
 }
