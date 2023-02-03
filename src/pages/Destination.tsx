@@ -18,7 +18,7 @@ const DestiPage: React.FunctionComponent<IAboutPageProps> = (props) => {
 
   return (
     <div>
-      <p>This is the about page.</p>
+      <p>This is the destination page.</p>
       <p>{message}</p>
       <nav>
             <Link to="/">Return home </Link>

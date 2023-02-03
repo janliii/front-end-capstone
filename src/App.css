@@ -36,15 +36,3 @@
     transform: rotate(360deg);
   }
 }
-.chatbot {
-  width: 500px;
-  margin: 0 auto;
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.chatbot-header {
-  text-align: center;
-  font-size: 24px;
-  font-

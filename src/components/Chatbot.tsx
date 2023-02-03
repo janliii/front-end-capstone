@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Chatbot.css'
+
 
 interface ChatbotProps { }
 
@@ -10,7 +12,7 @@ const Chatbot: React.FC<ChatbotProps> = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('https://your-chatbot-api.com/', { input });
+      const { data } = await axios.post('http://localhost:3001', { input });
       setResponse(data.response);
     } catch (error) {
       console.error(error);

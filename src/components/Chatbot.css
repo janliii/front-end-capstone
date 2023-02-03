@@ -1,0 +1,14 @@
+.chatbot {
+  width: 550px;
+  min-width: 350px;
+  height: 580px;
+  background-color: lightpink;
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 5px;
+  }
+  
+  .chatbot-header {
+    text-align: center;
+    font-size: 24px;
+      }  

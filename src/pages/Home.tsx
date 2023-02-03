@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import './Home.css'
+import Chatbot from "../components/Chatbot";
 
 
 export interface IHomePageProps {}
@@ -14,15 +15,15 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
       <nav>
             <Link to="/about">About</Link>
       </nav>
+      <button onClick={() => navigate("/layout/55")}>
+        Hit the Spot
+      </button>
       <nav>
             <Link to="/destination">Destination</Link>
       </nav>
       
-      <button onClick={() => navigate("/layout/55")}>
-        Hit the Spot
-      </button>
       </div>
-      <p>This is the home page.</p>
+      <Chatbot/>
     </div>
   );
 };

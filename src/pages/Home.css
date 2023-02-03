@@ -1,7 +1,7 @@
 
 .Navbar{
 display:flex;
-background: green;
+background: seagreen;
 height: 85px;
 justify-content: space-between;
 padding: 0.2rem calc((100vw - 1000px) / 2);
