@@ -13,7 +13,7 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
     <div >
       <div className="Navbar">
       <nav>
-            <Link to="/about">About</Link>
+            <Link to="/about">About the spot</Link>
       </nav>
       <button onClick={() => navigate("/layout/55")}>
         Hit the Spot
