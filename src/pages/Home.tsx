@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import './Home.css'
+
 
 export interface IHomePageProps {}
 
@@ -7,25 +9,20 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <p>This is the home page.</p>
+    <div >
+      <div className="Navbar">
       <nav>
-        <ul>
-          <li>
-            <Link to="/about">Go to the About Page!</Link>
-          </li>
-        </ul>
+            <Link to="/about">About</Link>
       </nav>
       <nav>
-        <ul>
-          <li>
-            <Link to="/test">Go to the Test Page!</Link>
-          </li>
-        </ul>
+            <Link to="/destination">Destination</Link>
       </nav>
+      
       <button onClick={() => navigate("/layout/55")}>
-        Go to layout, with a number
+        Hit the Spot
       </button>
+      </div>
+      <p>This is the home page.</p>
     </div>
   );
 };
