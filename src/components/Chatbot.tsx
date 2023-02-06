@@ -22,17 +22,17 @@ const Chatbot: React.FC<ChatbotProps> = () => {
   // };
 
   const postMessage = (input: string) => {
-    axios
-      .post("http://localhost:3300/users/chat", { input })
-      .then((response) => {
-        console.log(response);
-        setResponse(response.data);
-      });
+    try {
+      axios
+        .post("http://localhost:3300/users/chat", { input })
+        .then((response) => {
+          console.log(response);
+          setResponse(response.data);
+        });
+    } catch (error) {
+      console.error(error);
+    }
   };
-  //  .catch((error)=> {
-  //       console.error(error);
-  //     });
-  //   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
