@@ -7,21 +7,22 @@ justify-content: space-between;
 padding: 0.2rem calc((100vw - 1000px) / 2);
 z-index: 12;
 }
+
 a{
-    color: #black;
+    color: black;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
-  cursor: pointer;
-  &.active {
+  cursor: pointer;}
+  a.active {
     color: white
     ;
   }
-}
+
 
 button{
-  background:#1D8348;
+  background:#7abc95;
   width:120px;
 }

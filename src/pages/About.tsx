@@ -18,11 +18,14 @@ const AboutPage: React.FunctionComponent<IAboutPageProps> = (props) => {
 
   return (
     <div>
+      <div className="Navbar">
+        {/* <p>{message}</p> */}
+        <nav>
+          <Link to="/">Return home </Link>
+        </nav>
+      </div>
       <p>This is the about page.</p>
-      {/* <p>{message}</p> */}
-      <nav>
-            <Link to="/">Return home </Link>
-      </nav>
+      <button> Take me anywhere.</button>
     </div>
   );
 };
