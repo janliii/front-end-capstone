@@ -6,10 +6,10 @@ import "./Chatbot.css";
 interface ChatbotProps {}
 
 const Chatbot: React.FC<ChatbotProps> = () => {
-  const [messages, setMessages] = useState([]);
+  const [chats, setChats] = useState<any[]>([]);
 
   const [input, setInput] = useState("");
-  const [response, setResponse] = useState("");
+  const [botResponse, setBotResponse] = useState<any[]>([]);
 
   // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   //   e.preventDefault();
@@ -23,17 +23,16 @@ const Chatbot: React.FC<ChatbotProps> = () => {
   //     console.log(error);
   //   }
   // };
-  const chatLog: string[] = [];
 
   const postMessage = (input: string) => {
     try {
-      chatLog.push(input);
       axios
         .post("http://localhost:3300/users/chat", { input })
         .then((response) => {
           console.log(response);
-          chatLog.push(response.data);
-          setResponse(response.data);
+          const resp: String[] = [...botResponse];
+          resp.push(response.data);
+          setBotResponse(resp);
         });
     } catch (error) {
       console.error(error);
@@ -42,18 +41,30 @@ const Chatbot: React.FC<ChatbotProps> = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    addMsg(input);
+    console.log("messages", chats);
     postMessage(input);
-    console.log("chatlog", chatLog);
     setInput("");
   };
 
+  const addMsg = (input: string) => {
+    let inputs: String[] = [...chats];
+    // const s: String = e.currentTarget.value;
+    console.log(input);
+    console.log("input", inputs);
+    setChats(inputs);
+    inputs.push(input);
+  };
   return (
     <div className="chatbot">
       <div className="chatbot-header">Chatbot</div>
 
       {/* <div className="chatbot-response">{chatLog}</div> */}
 
-      <div className="chatbot-response">{response}</div>
+      <div className="chatbot-response">
+        <p>{chats}</p>
+        <p>{botResponse}</p>
+      </div>
 
       <div className="chatbot-body">
         <form className="chatbot-form" onSubmit={handleSubmit}>
