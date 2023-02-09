@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
+import FindSpotForm from "../components/FindSpotForm";
 
 export interface IAboutPageProps {}
 
@@ -25,6 +26,9 @@ const AboutPage: React.FunctionComponent<IAboutPageProps> = (props) => {
         </nav>
       </div>
       <p>This is the about page.</p>
+      <p>
+        <FindSpotForm />
+      </p>
       <button> Take me anywhere.</button>
     </div>
   );
