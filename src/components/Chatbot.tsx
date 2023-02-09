@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Chatbot.css";
-// import Chat from "./Chat";
+import { Chat } from "./Chat";
 
 interface ChatbotProps {}
 
@@ -10,19 +10,6 @@ const Chatbot: React.FC<ChatbotProps> = () => {
 
   const [input, setInput] = useState("");
   const [botResponse, setBotResponse] = useState<any[]>([]);
-
-  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   try {
-  //     const { data } = await axios.post("http://localhost:3300/users/chat", {
-  //       input,
-  //     });
-  //     console.log(data);
-  //     setResponse(data.response);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
 
   const postMessage = (input: string) => {
     try {
@@ -43,15 +30,12 @@ const Chatbot: React.FC<ChatbotProps> = () => {
     e.preventDefault();
     addMsg(input);
     console.log("messages", chats);
-    postMessage(input);
     setInput("");
+    postMessage(input);
   };
 
   const addMsg = (input: string) => {
     let inputs: String[] = [...chats];
-    // const s: String = e.currentTarget.value;
-    console.log(input);
-    console.log("input", inputs);
     setChats(inputs);
     inputs.push(input);
   };
@@ -59,11 +43,17 @@ const Chatbot: React.FC<ChatbotProps> = () => {
     <div className="chatbot">
       <div className="chatbot-header">Chatbot</div>
 
-      {/* <div className="chatbot-response">{chatLog}</div> */}
-
       <div className="chatbot-response">
-        <p>{chats}</p>
-        <p>{botResponse}</p>
+        {chats.map((msg) => (
+          <div className="userInput">
+            <Chat msg={msg} />
+          </div>
+        ))}
+        {botResponse.map((botrsp) => (
+          <div className="botRsp">
+            <Chat msg={botrsp} />
+          </div>
+        ))}
       </div>
 
       <div className="chatbot-body">

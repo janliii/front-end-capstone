@@ -1,12 +1,12 @@
-// import React from "react";
-// interface ChatMsg {}
+import React from "react";
+type ChatMsg = { msg: string };
 
-// const Chat: React.FC<ChatMsg> = () => {
-//   return (
-//     <div className="chat">
-//       <p className="chat-message">{msg}</p>
-//     </div>
-//   );
-// };
+const Chat = ({ msg }: ChatMsg) => {
+  return (
+    <div className="chat">
+      <p className="chat-message">{msg}</p>
+    </div>
+  );
+};
 
-export {};
+export { Chat };
