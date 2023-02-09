@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export interface IAboutPageProps {}
 
-const DestiPage: React.FunctionComponent<IAboutPageProps> = (props) => {
+const MySpots: React.FunctionComponent<IAboutPageProps> = (props) => {
   return (
     <div>
       <div className="Navbar">
@@ -17,4 +17,4 @@ const DestiPage: React.FunctionComponent<IAboutPageProps> = (props) => {
   );
 };
 
-export default DestiPage;
+export default MySpots;

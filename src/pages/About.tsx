@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
-import FindSpotForm from "../components/FindSpotForm";
+import FindSpotForm from "../components/findSpotForm";
 
 export interface IAboutPageProps {}
 
@@ -25,11 +25,10 @@ const AboutPage: React.FunctionComponent<IAboutPageProps> = (props) => {
           <Link to="/">Return home </Link>
         </nav>
       </div>
-      <p>This is the about page.</p>
-      <p>
+      <p>This is where you find a spot page.</p>
+      <div>
         <FindSpotForm />
-      </p>
-      <button> Take me anywhere.</button>
+      </div>
     </div>
   );
 };

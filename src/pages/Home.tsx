@@ -12,11 +12,11 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
     <div>
       <div className="Navbar">
         <nav>
-          <Link to="/about">Find a spot</Link>
+          <Link to="/findaspot">Find a spot</Link>
         </nav>
-        <button onClick={() => navigate("/layout/55")}>Hit the Spot</button>
+        <button onClick={() => navigate("/randomspot")}>Hit the Spot</button>
         <nav>
-          <Link to="/destination">My Spot</Link>
+          <Link to="/myspots">My Spot</Link>
         </nav>
       </div>
       <Chatbot />
