@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Spot } from "../components/Spot";
 
 export interface FindSpotProps {}
 
@@ -29,7 +30,7 @@ const FindSpotForm: React.FC<FindSpotProps> = () => {
       .then((response) => {
         console.log("New spot successfully created", response.data);
         const spots = [...spotData];
-        spots.push(response.data.board);
+        spots.push(response.data.user);
         setSpotsData(spots);
       })
       .catch((error) => {
@@ -44,9 +45,29 @@ const FindSpotForm: React.FC<FindSpotProps> = () => {
     setFormData(OriginalState);
   };
 
+  // const GetAllSpot = () => {
+  //   useEffect(() => {
+  //     axios
+  //       .get("http://localhost:3300/users", {})
+  //       .then((response) => {
+  //         setSpotsData(response.data);
+  //         console.log("API is working!!!!", response.data);
+  //       })
+  //       .catch((error) => {
+  //         console.log("Error", error);
+  //         alert("Couldn't get all spots .");
+  //       });
+  //   }, []);
+  // };
+
+  const eachSpot = spotData.map((spot) => {
+    return <li>{spot}</li>;
+  });
+
   return (
-    <form onSubmit={handleFormSubmit} className="create_newboard">
+    <form onSubmit={handleFormSubmit} className="create_newspot">
       <div>
+        <p>{eachSpot}</p>
         <label> Location </label>
         <input
           type="text"

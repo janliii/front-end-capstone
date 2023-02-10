@@ -39,6 +39,7 @@ const Chatbot: React.FC<ChatbotProps> = () => {
     setChats(inputs);
     inputs.push(input);
   };
+
   return (
     <div className="chatbot">
       <div className="chatbot-header">Chatbot</div>

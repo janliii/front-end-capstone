@@ -70,5 +70,18 @@
     color:#a35a5a;
     overflow-y: auto;
     border-radius: 15px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
 
   }
+.userInput {
+  grid-column: 2/ 2;
+
+  text-align: right;
+
+}
+.botRsp{
+  grid-column: 1/2;
+
+  text-align: left;
+}
