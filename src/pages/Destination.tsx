@@ -10,7 +10,7 @@ const MySpots: React.FunctionComponent<IAboutPageProps> = (props) => {
   const [spotData, setSpotsData] = useState<any[]>([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3300/users", {})
+      .get("https://hit-the-spot-backend.herokuapp.com/users", {})
       .then((response) => {
         setSpotsData(response.data);
         console.log("API is working!!!!", response.data);

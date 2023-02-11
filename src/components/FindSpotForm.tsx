@@ -26,7 +26,7 @@ const FindSpotForm: React.FC<FindSpotProps> = () => {
 
   const createNewSpot = (newSpot: {}) => {
     axios
-      .post("http://localhost:3300/users", newSpot)
+      .post("https://hit-the-spot-backend.herokuapp.com/users", newSpot)
       .then((response) => {
         console.log("New spot successfully created", response.data);
         const spots = [...spotData];

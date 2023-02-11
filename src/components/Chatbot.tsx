@@ -14,7 +14,9 @@ const Chatbot: React.FC<ChatbotProps> = () => {
   const postMessage = (input: string) => {
     try {
       axios
-        .post("http://localhost:3300/users/chat", { input })
+        .post("https://hit-the-spot-backend.herokuapp.com/users/chat", {
+          input,
+        })
         .then((response) => {
           console.log(response);
           const resp: String[] = [...botResponse];
@@ -40,10 +42,10 @@ const Chatbot: React.FC<ChatbotProps> = () => {
     inputs.push(input);
   };
 
+  //make them into one array
   return (
     <div className="chatbot">
       <div className="chatbot-header">Chatbot</div>
-
       <div className="chatbot-response">
         {chats.map((msg) => (
           <div className="userInput">
