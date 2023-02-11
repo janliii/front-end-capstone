@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LayoutComponent from "./components/Layout";
 import AboutPage from "./pages/About";
 import HomePage from "./pages/Home";
-import MySpots from "./pages/Destination";
+import MySpots from "./pages/MySpots";
 
 export interface IApplicationProps {}
 

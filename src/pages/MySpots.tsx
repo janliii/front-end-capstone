@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Spot, ISpotProps } from "../components/Spot";
-import findSpotForm from "../components/findSpotForm";
 import axios from "axios";
 
 export interface IAboutPageProps {}
@@ -13,13 +12,29 @@ const MySpots: React.FunctionComponent<IAboutPageProps> = (props) => {
       .get("https://hit-the-spot-backend.herokuapp.com/users", {})
       .then((response) => {
         setSpotsData(response.data);
-        console.log("API is working!!!!", response.data);
+        // console.log("API is working!!!!", response.data);
       })
       .catch((error) => {
         console.log("Error", error);
         alert("Couldn't get all spots .");
       });
   }, []);
+
+  const deleteSpot = (spot: ISpotProps["spotData"]) => {
+    axios
+      .delete(`https://hit-the-spot-backend.herokuapp.com/users/${spot.id}`)
+      .then((response) => {
+        const newSpotsData = myspotData.filter((currentSpot) => {
+          return currentSpot.id !== spot.id;
+        });
+        setSpotsData(newSpotsData);
+        console.log("deletion is successful");
+      })
+      .catch((error) => {
+        console.log("Error", error);
+        alert("Couldn't delete the spot.");
+      });
+  };
 
   return (
     <div>
@@ -31,10 +46,9 @@ const MySpots: React.FunctionComponent<IAboutPageProps> = (props) => {
       <p>This is the destination page. You can see saved spots</p>
       {myspotData.map((spot) => (
         <div key={spot.id} className="eachSpot">
-          <Spot spotData={spot}></Spot>
+          <Spot spotData={spot} fun={() => deleteSpot(spot)}></Spot>
         </div>
       ))}
-      ;
     </div>
   );
 };
