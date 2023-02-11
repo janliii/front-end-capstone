@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Spot } from "../components/Spot";
+import { Spot, ISpotProps } from "../components/Spot";
 import findSpotForm from "../components/findSpotForm";
 import axios from "axios";
 
 export interface IAboutPageProps {}
 
 const MySpots: React.FunctionComponent<IAboutPageProps> = (props) => {
-  const [spotData, setSpotsData] = useState<any[]>([]);
+  const [myspotData, setSpotsData] = useState<any[]>([]);
   useEffect(() => {
     axios
       .get("https://hit-the-spot-backend.herokuapp.com/users", {})
@@ -29,19 +29,13 @@ const MySpots: React.FunctionComponent<IAboutPageProps> = (props) => {
         </nav>
       </div>
       <p>This is the destination page. You can see saved spots</p>
-
-      {spotData.map((spot) => (
+      {myspotData.map((spot) => (
         <div key={spot.id} className="eachSpot">
-          <p>User name: {spot.name} </p>
-          <p>Destination: {spot.location}</p>
-          <p>
-            Local Langauge:
-            {spot.language_spoken}
-          </p>
+          <Spot spotData={spot}></Spot>
         </div>
       ))}
+      ;
     </div>
   );
 };
-
 export default MySpots;

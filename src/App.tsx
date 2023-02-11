@@ -20,7 +20,7 @@ const App: React.FunctionComponent<IApplicationProps> = (props) => {
           <Route index element={<MySpots />} />
         </Route>
         <Route path="randomspot" element={<LayoutComponent />}>
-          <Route index element={<AboutPage />} />
+          {/* <Route index element={<AboutPage />} /> */}
           <Route path=":number" element={<AboutPage />} />
         </Route>
       </Routes>

@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from "react";
 
-export interface SpotProps {
-  location: string;
-  id: number;
+export interface ISpotProps {
+  spotData: {
+    location: string;
+    id: number;
+    language_spoken: string;
+    name: string;
+  };
 }
 
-const Spot: React.FC<SpotProps> = (props) => {
+const Spot: React.FC<ISpotProps> = (props) => {
+  const { name, location, language_spoken } = props.spotData;
+
   return (
-    <div className="chat">
-      <p className="spot"></p>
+    <div className="Spot">
+      <p>Destination: {location}</p>
+      <p>User Name: {name}</p>
+      <p>Local language: {language_spoken}</p>
     </div>
   );
 };
