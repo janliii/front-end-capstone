@@ -72,15 +72,16 @@
     border-radius: 15px;
     display:grid;}
 
-/* .chatbot-response div:nth-child(even) {
-  align-items: left;
-  font-size: 1.1rem;
-  background-color: rgb(177, 208, 177);
-} 
 .chatbot-response div:nth-child(odd) {
-  align-items: right;
   font-size: 1.1rem;
-  display:flex;
-  background-color: rgb(230, 169, 192);
+  justify-items: end;
+  display: grid;
+  margin-right: 10px;
 
-}  */
+} 
+.chatbot-response div:nth-child(even) {
+  font-size: 1.1rem;
+  display:grid;
+  justify-items:left;
+  margin-left: 10px;
+}  

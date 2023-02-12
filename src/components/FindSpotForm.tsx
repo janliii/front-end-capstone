@@ -45,21 +45,6 @@ const FindSpotForm: React.FC<FindSpotProps> = () => {
     setFormData(OriginalState);
   };
 
-  // const GetAllSpot = () => {
-  //   useEffect(() => {
-  //     axios
-  //       .get("http://localhost:3300/users", {})
-  //       .then((response) => {
-  //         setSpotsData(response.data);
-  //         console.log("API is working!!!!", response.data);
-  //       })
-  //       .catch((error) => {
-  //         console.log("Error", error);
-  //         alert("Couldn't get all spots .");
-  //       });
-  //   }, []);
-  // };
-
   const eachSpot = spotData.map((spot) => {
     return <li>{spot}</li>;
   });
