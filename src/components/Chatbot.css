@@ -77,12 +77,13 @@ background: rgba(0, 0, 0, 0.218);
   font-size: 1.1rem;
   justify-items: end;
   display: grid;
-  margin-right: 10px;
+  margin-right: 10px;}
 
-} 
+
+
 .chatbot-response div:nth-child(even) {
   font-size: 1.1rem;
   display:grid;
   justify-items:left;
-  margin-left: 10px;
-}  
+  margin-left: 10px;}
+
