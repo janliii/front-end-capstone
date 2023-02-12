@@ -37,7 +37,7 @@
   }
 }
 .eachSpot {
-  background-color: #c4eaaa;
+  /* background-color: #aaeac8; */
   box-shadow: inset -9px -5px 7px rgb(190 190 209 / 32%);
   min-height: 200px;
   min-width: 200px;
@@ -47,5 +47,16 @@
   padding: 2rem;
   flex-direction: column;
   border: 10px solid white;
-  border-radius: 10px 100px / 120px;
+  border-radius: 50%;
+}
+.eachSpot:nth-child(even) {
+  background-color: #efcef3;
+
+}
+/* .eachSpot:nth-child(even) {
+  background-color: #aad8a7;
+
+} */
+.eachSpot:nth-child(odd) {
+  background-color: #a7cad8;
 }

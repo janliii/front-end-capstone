@@ -20,7 +20,7 @@ const Spot: React.FC<ISpotProps> = (props) => {
       <p>Local language: {language_spoken}</p>
       <div className="spotControl">
         <p className="spot-item__delete" onClick={() => props.fun()}>
-          Delete
+          Delete this spot
         </p>
       </div>
     </div>
