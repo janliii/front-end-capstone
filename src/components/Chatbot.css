@@ -1,8 +1,9 @@
 .chatbot {
   width: 550px;
   min-width: 350px;
-  height: 380px;
-  background-color: hsl(143, 19%, 86%);
+  height: 480px;
+  /* background-color: hsl(143, 19%, 86%); */
+background: rgba(0, 0, 0, 0.218);
   padding: 25px;
   margin: 20px auto;
   border-radius: 15px;
@@ -21,7 +22,6 @@
     text-align:center;
   }
   
-  /* CSS */
   .chatbot-form button {
     background-color: #c2fbd7;
     border-radius: 100px;
@@ -65,9 +65,10 @@
 
   .chatbot-response {
     width: 100%;
-    height: 150px;
+    height: 250px;
     background:#f6f2f2;
     color:#5a71a3;
+    font-weight: 500;
     overflow-y: auto;
     border-radius: 15px;
     display:grid;}

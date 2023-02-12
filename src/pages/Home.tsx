@@ -9,7 +9,7 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="pageContainer">
       <div className="Navbar">
         <nav>
           <Link to="/findaspot">Find a spot</Link>

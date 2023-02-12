@@ -1,8 +1,10 @@
 
 .Navbar{
 display:flex;
-background: #7190a5 ;
-height: 85px;
+/* background: #7190a5 ; */
+background: rgba(0, 0, 0, 0.218);
+
+height: 65px;
 justify-content: space-between;
 padding: 0.2rem calc((100vw - 1000px) / 2);
 z-index: 12;
@@ -25,4 +27,12 @@ a{
 button{
   background:#7abc95;
   width:120px;
+}
+#root,.pageContainer {
+  background-color: rgb(133, 160, 137);
+  height:100%;
+  min-height:100%;
+  max-height:100%;
+  background-image: url("/src/img/hotairballons.jpeg");
+  background-size: cover;
 }

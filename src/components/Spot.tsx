@@ -1,4 +1,5 @@
 import React from "react";
+import "./Spot.css";
 
 export interface ISpotProps {
   spotData: {
@@ -7,7 +8,8 @@ export interface ISpotProps {
     language_spoken: string;
     name: string;
   };
-  fun: () => void;
+  fun1: () => void;
+  fun2: () => void;
 }
 
 const Spot: React.FC<ISpotProps> = (props) => {
@@ -19,8 +21,11 @@ const Spot: React.FC<ISpotProps> = (props) => {
       <p>User Name: {name}</p>
       <p>Local language: {language_spoken}</p>
       <div className="spotControl">
-        <p className="spot-item__delete" onClick={() => props.fun()}>
-          Delete this spot
+        <p className="spot-item__delete" onClick={() => props.fun1()}>
+          Delete
+        </p>
+        <p className="spot-item__update" onClick={() => props.fun2()}>
+          Update
         </p>
       </div>
     </div>

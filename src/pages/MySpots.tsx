@@ -36,6 +36,22 @@ const MySpots: React.FunctionComponent<IAboutPageProps> = (props) => {
       });
   };
 
+  const updateSpot = (spot: ISpotProps["spotData"]) => {
+    axios
+      .patch(`https://hit-the-spot-backend.herokuapp.com/users/${spot.id}`)
+      .then((response) => {
+        const newSpotsData = myspotData.filter((currentSpot) => {
+          return currentSpot.id !== spot.id;
+        });
+        setSpotsData(newSpotsData);
+        console.log("update is successful");
+      })
+      .catch((error) => {
+        console.log("Error", error);
+        alert("Couldn't update the spot.");
+      });
+  };
+
   return (
     <div>
       <div className="Navbar">
@@ -46,7 +62,11 @@ const MySpots: React.FunctionComponent<IAboutPageProps> = (props) => {
       <p>This is the destination page. You can see saved spots</p>
       {myspotData.map((spot) => (
         <div key={spot.id} className="eachSpot">
-          <Spot spotData={spot} fun={() => deleteSpot(spot)}></Spot>
+          <Spot
+            spotData={spot}
+            fun1={() => deleteSpot(spot)}
+            fun2={() => updateSpot(spot)}
+          ></Spot>
         </div>
       ))}
     </div>
