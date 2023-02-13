@@ -77,7 +77,8 @@ background: rgba(0, 0, 0, 0.218);
   font-size: 1.1rem;
   justify-items: end;
   display: grid;
-  margin-right: 10px;}
+  margin-right: 10px;
+;}
 
 
 
@@ -87,3 +88,7 @@ background: rgba(0, 0, 0, 0.218);
   justify-items:left;
   margin-left: 10px;}
 
+.userInput{
+  max-height: min-content;
+  font-family: monospace;
+}

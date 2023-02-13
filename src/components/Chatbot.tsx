@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Chatbot.css";
 import { Chat } from "./Chat";
-import { setEngine } from "crypto";
 
 interface ChatbotProps {}
 const Chatbot: React.FC<ChatbotProps> = () => {
@@ -42,7 +41,11 @@ const Chatbot: React.FC<ChatbotProps> = () => {
     setInput("");
     postMessage(input);
   };
-
+  // const handleKeydown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  //   if (e.key === "Enter") {
+  //     handleSubmit;
+  //   }
+  // };
   //make them into one array
   return (
     <div className="chatbot">
@@ -61,14 +64,9 @@ const Chatbot: React.FC<ChatbotProps> = () => {
             // type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Type to chat or press the button to speak..."
+            placeholder="Ask me about weather, location, and events.."
           />
           <button type="submit">Send</button>
-          <p>
-            <button className="speakBtn" type="submit">
-              Speak
-            </button>
-          </p>
         </form>
       </div>
     </div>

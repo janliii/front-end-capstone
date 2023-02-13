@@ -45,14 +45,9 @@ const FindSpotForm: React.FC<FindSpotProps> = () => {
     setFormData(OriginalState);
   };
 
-  const eachSpot = spotData.map((spot) => {
-    return <li>{spot}</li>;
-  });
-
   return (
     <form onSubmit={handleFormSubmit} className="create_newspot">
       <div>
-        <p>{eachSpot}</p>
         <label> Location </label>
         <input
           type="text"

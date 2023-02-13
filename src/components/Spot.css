@@ -27,3 +27,13 @@
     display:flex;
     justify-content: space-around;
   }
+  .create_newspot{
+    background-color: #efcef3;
+    width: 550px;
+  min-width: 350px;
+  height: 380px;
+background: rgba(0, 0, 0, 0.218);
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 15px;
+  }
