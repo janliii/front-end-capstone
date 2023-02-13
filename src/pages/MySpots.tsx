@@ -76,16 +76,17 @@ const MySpots: React.FunctionComponent<IAboutPageProps> = (props) => {
           <Link to="/myspots">My Spot</Link>
         </nav>
       </div>
-      <p>This is the destination page. You can see saved spots</p>
-      {myspotData.map((spot) => (
-        <div key={spot.id} className="eachSpot">
-          <Spot spotData={spot} fun1={() => deleteSpot(spot)}></Spot>
-          {popupVisible && (
-            <UpdateSpotForm spotData={spot} updateSpot={updateSpot} />
-          )}
-          <div onClick={togglePopup}> {popupVisible ? "close" : "update"}</div>
-        </div>
-      ))}
+      <div className="myspot_container">
+        {myspotData.map((spot) => (
+          <div key={spot.id} className="eachSpot">
+            <Spot spotData={spot} fun1={() => deleteSpot(spot)}></Spot>
+            {popupVisible && (
+              <UpdateSpotForm spotData={spot} updateSpot={updateSpot} />
+            )}
+            <div onClick={togglePopup}> {popupVisible ? "X" : "update"}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

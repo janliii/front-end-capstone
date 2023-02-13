@@ -1,22 +1,18 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import { ISpotProps } from "../components/Spot";
 export interface UpdateSpotProps {
   updateSpot: (id: Number, location: string) => void;
   spotData: ISpotProps["spotData"];
 }
 
-// const OriginalState = {
-//   name:"",
-//   language_spoken:"",
-//     location: "",
-// };
-
 const UpdateSpotForm: React.FC<UpdateSpotProps> = (props) => {
+  //   const [popUp, setpopUp] = useState<boolean>(false);
+  //   function toggleClose() {
+  //     setpopUp(!popUp);
+  //   }
   const [formData, setFormData] = useState<{ location: string }>({
     location: "",
   });
-  const [updatedData, setUpdatedData] = useState<any[]>([]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
@@ -32,24 +28,25 @@ const UpdateSpotForm: React.FC<UpdateSpotProps> = (props) => {
     e.preventDefault();
     props.updateSpot(props.spotData.id, formData.location);
     setFormData({ location: "" });
-
-    // updateSpot(formData);
   };
 
   return (
-    <form onSubmit={handleFormSubmit} className="update_spot">
-      <div>
-        <input
-          type="text"
-          name="location"
-          value={formData.location}
-          onChange={handleChange}
-        ></input>
-        <button className="button-78" type="submit">
-          submit
-        </button>
-      </div>
-    </form>
+    <div className="update_spot">
+      <form onSubmit={handleFormSubmit}>
+        <div className="updateInput">
+          <input
+            type="text"
+            name="location"
+            value={formData.location}
+            onChange={handleChange}
+          ></input>
+          <button className="button-78" type="submit">
+            Update Location
+          </button>
+        </div>
+        {/* <button onClick={toggleClose}>{popUp ? "" : "close"}</button> */}
+      </form>
+    </div>
   );
 };
 

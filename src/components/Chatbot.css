@@ -59,7 +59,7 @@ background: rgba(0, 0, 0, 0.218);
   }
   .chatbot-form textarea:focus{
     /* transform: scalex(1.1); */
-    background-color: rgb(147, 164, 147);
+    background-color: rgb(173, 199, 228);
 
   }
 
@@ -70,6 +70,7 @@ background: rgba(0, 0, 0, 0.218);
     color:#5a71a3;
     font-weight: 500;
     overflow-y: auto;
+    overflow-wrap: anywhere;
     border-radius: 15px;
     display:grid;}
 
@@ -80,8 +81,6 @@ background: rgba(0, 0, 0, 0.218);
   margin-right: 10px;
 ;}
 
-
-
 .chatbot-response div:nth-child(even) {
   font-size: 1.1rem;
   display:grid;
@@ -89,6 +88,5 @@ background: rgba(0, 0, 0, 0.218);
   margin-left: 10px;}
 
 .userInput{
-  max-height: min-content;
   font-family: monospace;
 }
