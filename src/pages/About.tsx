@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FindSpotForm from "../components/FindSpotForm";
+import { FindSpotForm } from "../components/FindSpotForm";
 import "../App.css";
 
 export interface IAboutPageProps {}

@@ -87,4 +87,4 @@ const FindSpotForm: React.FC<FindSpotProps> = () => {
   );
 };
 
-export default FindSpotForm;
+export { FindSpotForm };

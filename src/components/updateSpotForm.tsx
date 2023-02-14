@@ -50,4 +50,4 @@ const UpdateSpotForm: React.FC<UpdateSpotProps> = (props) => {
   );
 };
 
-export default UpdateSpotForm;
+export { UpdateSpotForm };
