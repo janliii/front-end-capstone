@@ -9,13 +9,13 @@ const AboutPage: React.FunctionComponent<IAboutPageProps> = (props) => {
   return (
     <div>
       <div className="Navbar">
-        <nav>
+        <nav className="findaspot">
           <Link to="/findaspot">Find a spot</Link>
         </nav>
-        <nav>
+        <nav className="homepage">
           <Link to="/">Home</Link>
         </nav>
-        <nav>
+        <nav className="myspots">
           <Link to="/myspots">My Spot</Link>
         </nav>
       </div>

@@ -1,15 +1,27 @@
 
 .Navbar{
-display:flex;
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
 /* background: #7190a5 ; */
-background: rgba(0, 0, 0, 0.218);
-
+background: rgba(236, 226, 226, 0.218);
 height: 65px;
 justify-content: space-between;
-padding: 0.2rem calc((100vw - 1000px) / 2);
 z-index: 12;
+color: #ff4411; 
+font-size: 24px; 
+font-family: monospace; 
 }
+.homepage {
+  grid-column: 1;
+  align-items: center;
 
+}
+.myspots{  
+  grid-column: 2;
+}
+.findaspot{  
+  grid-column: 3;
+}
 a{
     color: black;
   display: flex;
