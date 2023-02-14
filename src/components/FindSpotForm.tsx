@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Spot } from "../components/Spot";
+import { Spot } from "./Spot";
 
 export interface FindSpotProps {}
 

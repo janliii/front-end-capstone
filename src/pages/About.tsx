@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
-import FindSpotForm from "../components/findSpotForm";
+import FindSpotForm from "../components/FindSpotForm";
 import "../App.css";
 
 export interface IAboutPageProps {}

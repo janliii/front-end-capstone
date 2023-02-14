@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ISpotProps } from "../components/Spot";
+import { ISpotProps } from "./Spot";
 export interface UpdateSpotProps {
   updateSpot: (id: Number, location: string) => void;
   spotData: ISpotProps["spotData"];
