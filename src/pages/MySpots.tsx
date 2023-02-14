@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Spot, ISpotProps } from "../components/Spot";
 import axios from "axios";
-import UpdateSpotForm from "../components/UpdateSpotForm";
+import UpdateSpotForm from "../components/updateSpotForm";
 
 export interface IAboutPageProps {}
 
