@@ -12,7 +12,7 @@ const Chatbot: React.FC<ChatbotProps> = () => {
   const postMessage = (input: string) => {
     try {
       axios
-        .post("http://localhost:3300/users/chat", {
+        .post("https://hit-the-spot-backend.herokuapp.com/users/chat", {
           input,
         })
         .then((response) => {

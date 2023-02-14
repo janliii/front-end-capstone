@@ -48,29 +48,27 @@ const FindSpotForm: React.FC<FindSpotProps> = () => {
   return (
     <form onSubmit={handleFormSubmit} className="create_newspot">
       <div>
-        <label> Location </label>
         <input
           type="text"
-          id="spotFormTitle"
-          name="location"
-          value={formData.location}
-          onChange={handleChange}
-        ></input>
-      </div>
-      <div>
-        <label> Your name: </label>
-        <input
-          type="text"
-          //   id="boardFormOwner"
+          placeholder="Your name"
           name="name"
           value={formData.name}
           onChange={handleChange}
         ></input>
+      </div>
+      <input
+        placeholder="Location"
+        type="text"
+        id="spotFormTitle"
+        name="location"
+        value={formData.location}
+        onChange={handleChange}
+      ></input>
+      <div>
         <div>
-          <label>Destination Language </label>
           <input
             type="text"
-            // id="spotFormTitle"
+            placeholder="Language"
             name="language_spoken"
             value={formData.language_spoken}
             onChange={handleChange}

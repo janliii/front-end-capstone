@@ -66,11 +66,10 @@ const MySpots: React.FunctionComponent<IAboutPageProps> = (props) => {
     <div>
       <div className="Navbar">
         <nav>
-          <Link to="/">Return home </Link>
-        </nav>
-
-        <nav>
           <Link to="/findaspot">Find a spot</Link>
+        </nav>
+        <nav>
+          <Link to="/">Home</Link>
         </nav>
         <nav>
           <Link to="/myspots">My Spot</Link>
@@ -83,7 +82,9 @@ const MySpots: React.FunctionComponent<IAboutPageProps> = (props) => {
             {popupVisible && (
               <UpdateSpotForm spotData={spot} updateSpot={updateSpot} />
             )}
-            <div onClick={togglePopup}> {popupVisible ? "X" : "update"}</div>
+            <div onClick={togglePopup} className="spotControl">
+              {popupVisible ? "close" : "update"}
+            </div>
           </div>
         ))}
       </div>

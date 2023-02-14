@@ -14,9 +14,8 @@ const AboutPage: React.FunctionComponent<IAboutPageProps> = (props) => {
           <Link to="/findaspot">Find a spot</Link>
         </nav>
         <nav>
-          <Link to="/">Return Home</Link>
+          <Link to="/">Home</Link>
         </nav>
-
         <nav>
           <Link to="/myspots">My Spot</Link>
         </nav>

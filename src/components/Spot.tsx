@@ -15,10 +15,12 @@ const Spot: React.FC<ISpotProps> = (props) => {
   const { name, location, language_spoken } = props.spotData;
 
   return (
-    <div className="Spot">
-      <p>Destination: {location}</p>
-      <p>User Name: {name}</p>
-      <p>Local language: {language_spoken}</p>
+    <div>
+      <div className="Spot">
+        <p>Destination: {location}</p>
+        <p>User Name: {name}</p>
+        <p>Local language: {language_spoken}</p>
+      </div>
       <div className="spotControl">
         <p className="spot-item__delete" onClick={() => props.fun1()}>
           Delete
