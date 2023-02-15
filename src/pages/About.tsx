@@ -20,7 +20,6 @@ const AboutPage: React.FunctionComponent<IAboutPageProps> = (props) => {
         </nav>
       </div>
 
-      <p>This is where you find a spot page.</p>
       <div>
         <FindSpotForm />
       </div>

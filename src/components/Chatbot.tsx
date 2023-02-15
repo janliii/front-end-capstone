@@ -49,7 +49,7 @@ const Chatbot: React.FC<ChatbotProps> = () => {
   //make them into one array
   return (
     <div className="chatbot">
-      <div className="chatbot-header">Chatbot</div>
+      <div className="chatbot-header"> 🤖</div>
       <div className="chatbot-response">
         {entries.map((msg) => (
           <div className="userInput">
@@ -61,12 +61,15 @@ const Chatbot: React.FC<ChatbotProps> = () => {
       <div className="chatbot-body">
         <form className="chatbot-form" onSubmit={handleSubmit}>
           <textarea
+            className="enter_chat"
             // type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Ask me about weather, location, and events.."
           />
-          <button type="submit">Send</button>
+          <button type="submit" className="button-30">
+            Send
+          </button>
         </form>
       </div>
     </div>

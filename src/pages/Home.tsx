@@ -13,7 +13,7 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
           <Link to="/findaspot">Find a spot</Link>
         </nav>
         <nav className="homepage">
-          <Link to="/"> Home</Link>
+          <Link to="/"> Hit the Spot</Link>
         </nav>
         <nav className="myspots">
           <Link to="/myspots">My Spot</Link>

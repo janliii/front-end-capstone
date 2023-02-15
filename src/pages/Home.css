@@ -1,15 +1,16 @@
 
 .Navbar{
 display:grid;
-grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: 3fr 1fr 1fr;
+grid-row:1;
 /* background: #7190a5 ; */
 background: rgba(236, 226, 226, 0.218);
-height: 65px;
+height: 55px;
 justify-content: space-between;
 z-index: 12;
 color: #ff4411; 
 font-size: 24px; 
-font-family: monospace; 
+font-family: monospace ; 
 }
 .homepage {
   grid-column: 1;
@@ -18,9 +19,18 @@ font-family: monospace;
 }
 .myspots{  
   grid-column: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
 }
 .findaspot{  
   grid-column: 3;
+  grid-row:1/1;     display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+
 }
 a{
     color: black;
@@ -36,36 +46,29 @@ a{
   }
 
 
-button{
-  background:#7abc95;
-  width:120px;
-}
-#root,.pageContainer {
-  background-color: rgb(133, 160, 137);
-  height:100vh;
+
+  #root,.pageContainer {
+  margin: 0%;
+  margin-right: 0%;
+  padding-right:0%;
+  background-color: rgb(243, 248, 244);
+  height:100%;
   min-height:100%;
   max-height:100%;
+  background-repeat:repeat-x;
+  background-image: url("/src/img/repeating\ ballons.jpeg");
 
-background-repeat:repeat-x;
+  background-position: 
+    0 20%,
+    0 100%,
+    0 50%,
+    0 100%,
+    0 0;
+  background-size: cover;
 
-background-image: url("/src/img/repeating\ ballons.jpeg");
-
-background-position: 
-  0 20%,
-  0 100%,
-  0 50%,
-  0 100%,
-  0 0;
-background-size: cover;
-  /* 2500px,
-  800px,
-  500px 200px,
-  1000px,
-  400px 260px; */
-animation: 50s para infinite linear;
-background-size: cover;
-overflow: scroll;
-
+  animation: 50s para infinite linear;
+  background-size: cover;
+  overflow: auto;
 }
 @keyframes para {
   100% {
